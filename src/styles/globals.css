@@ -1,0 +1,26 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color: #DACDEB;
+  background-color: #0F0E10;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  padding: 1% 12% 0 12%;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-weight: 400;
+  height: 100vh;
+  width: 100vw;
+  
+  background: url("/src/assets/light.svg") no-repeat center top fixed;
+  background-size: cover;
+}
