@@ -18,7 +18,7 @@ footer {
     height: 1px;
     background: hsla(217, 10%, 84%, 0.05);
     margin-bottom: 36px;
-    margin-top: 96px;
+    margin-top: 64px;
 }
 
 .footer-links ul li a{
@@ -38,5 +38,5 @@ footer p {
     color: #8b7e93a1;
     font-size: 14px;
     font-weight: 600;
-    margin-bottom: 98px;
+    margin-bottom: 64px;
 }

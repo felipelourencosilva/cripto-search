@@ -1,0 +1,22 @@
+.primary-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 48px;
+    width: 164px;
+    background-color: white;
+    background: linear-gradient(40deg, rgb(106, 0, 168) 0%, rgb(255, 94, 250, 0.7) 80%);
+    border-radius: 6px;
+    box-shadow: 1px 1px 10px rgba(255, 191, 255, 0.199);
+    border: 1px solid rgb(204, 0, 255);
+    cursor: pointer;
+    color: #DACDEB;
+    font-weight: 600;
+    text-decoration: none;
+    
+    transition: 0.3s;
+}
+
+.primary-button:hover {
+    filter: brightness(1.2);
+}

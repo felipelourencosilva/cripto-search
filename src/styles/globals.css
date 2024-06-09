@@ -23,4 +23,19 @@ body {
   
   background: url("/src/assets/light.svg") no-repeat center top fixed;
   background-size: cover;
+
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background: #29272c;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4c4852;
+  border-radius: 10px;
 }
