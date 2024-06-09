@@ -7,7 +7,6 @@ export default function NavBar() {
     <div className="navbar-container">
         <div className="navbar-line1"></div>
         <nav className="navbar">
-            
             <ul>
                 <li>
                     <Link id={location.pathname === "/" ? "selected-path" : ""} to="/">Home</Link>
