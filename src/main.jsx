@@ -5,6 +5,7 @@ import './styles/globals.css'
 import HomePage from './pages/Home/index.jsx'
 import NavBar from './components/NavBar/index.jsx'
 import Layout from './components/Layout/index.jsx'
+import CryptosPage from './pages/Cryptos/index.jsx'
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,10 @@ const router = createBrowserRouter([
         path: "/",
         element: <HomePage />,
       },
+      {
+        path: "/cryptos",
+        element: <CryptosPage />,
+      }
     ],
   },
 ]);

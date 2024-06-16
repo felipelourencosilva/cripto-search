@@ -1,0 +1,53 @@
+.cryptos-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 70vh;
+}
+
+.cryptos-search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+    height: 44px;
+    width: 350px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    background: linear-gradient(90deg, rgba(29,29,29,0.1) 0%, rgba(29,29,29,0.05) 50%, rgba(29,29,29,0.1) 100%);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.cryptos-search input {
+    margin-left: 5px;
+    width: 80%;
+    height: 50%;
+    line-height: normal;
+    padding: 0 10px;
+    border: none;
+    background: none;
+    font-size: 16px;
+    color: #DACDEB;
+    border-left: 1px solid #dacdeb23;
+}
+
+.cryptos-search input:focus {
+    outline: none;
+}
+
+.cryptos-search input::placeholder {
+    color: #dacdeba6;
+}
+
+.cryptos-search:hover {
+    border: 1px solid #dacdeb5b;
+    
+}
+
+.search-icon {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin-right: 5px;
+}
