@@ -1,0 +1,75 @@
+.crypto-card-container {
+    padding: 10px 20px;
+    margin-bottom: 30px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 320px;
+    height: 70px;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    font-weight: 600;
+    color: #DACDEB;
+    line-height: 0.3;
+    
+    background: linear-gradient(15deg, rgba(122, 44, 138, 0.3) 0%, rgba(28,28,28,0.5) 60%);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.crypto-card-information {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    gap: 15px;
+}
+
+.crypto-card-information img{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.crypto-card-no-image {
+    font-size: 18px;
+    font-weight: 600;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.crypto-name, .crypto-price {
+    margin: 20px 0;
+    font-size: 20px;
+    line-height: 0;
+}
+
+.crypto-code, .crypto-variation {
+    margin: 20px 0;
+    font-size: 14px;
+    font-weight: 500;
+    color: #6D7280;
+}
+
+.crypto-variation {
+    display: flex;
+    justify-content: end;
+}
+
+.positive-variation{
+    color: #07B54C;
+}
+
+.negative-variation{
+    color: #b5072d;
+}
