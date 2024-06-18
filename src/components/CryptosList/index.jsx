@@ -4,6 +4,7 @@ import CryptoCard from "../CryptoCard";
 
 import axios from "axios";
 import "./styles.css";
+import Loading from "../Loading";
 
 export default function CryptosList() {
     const [cryptoData, setCryptoData] = useState(null);
@@ -27,7 +28,7 @@ export default function CryptosList() {
     }, []);
 
     if (!cryptoData) {
-        return <div className="spinner-container"><div className="spinner-loading"></div></div>;
+        return <Loading />
     }
 
     return (
