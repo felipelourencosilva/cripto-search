@@ -6,6 +6,7 @@ import HomePage from './pages/Home/index.jsx'
 import NavBar from './components/NavBar/index.jsx'
 import Layout from './components/Layout/index.jsx'
 import CryptosPage from './pages/Cryptos/index.jsx'
+import CryptoCard from './components/CryptoCard/index.jsx'
 
 const router = createBrowserRouter([
   {
@@ -19,7 +20,11 @@ const router = createBrowserRouter([
       {
         path: "/cryptos",
         element: <CryptosPage />,
-      }
+      },
+      {
+        path: "/cryptos/:id",
+        element: <CryptoCard name={"teste"}/>,
+      },
     ],
   },
 ]);
