@@ -9,16 +9,48 @@ import "./styles.css";
 import { FiSearch } from "react-icons/fi";
 
 export default function CryptosPage() {
+    const [search, setSearch] = useState("");
+    const [inputText, setInputText] = useState("");
+    const [cryptoData, setCryptoData] = useState(null);
+    const [error, setError] = useState(null);
+
+    useEffect(() => {
+        const handleSearch = async () => {
+            try {
+                let url = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=brl&order=market_cap_desc&per_page=20&precision=2&price_change_percentage=24h?x_cg_pro_api_key=${import.meta.env.VITE_APP_API_KEY}`;
+                if (search !== "") {
+                    url = `https://api.coingecko.com/api/v3/search?query=${search}`;
+                    const response = await axios.get(url);
+                    setCryptoData(response.data.coins);
+                } else {
+                    const response = await axios.get(url);
+                    setCryptoData(response.data);
+                    console.log(response.data)
+                }
+            } catch (ex) {
+                console.error(ex);
+                setError(ex);
+            }
+        };
+        console.log(search);
+        handleSearch();
+    }, [search]);
+
     return (
         <div className="cryptos-container">
             <div className="cryptos-search">
-                <div className="search-icon">
+                <input 
+                    type="text" 
+                    placeholder="Search..."
+                    value={inputText}
+                    onChange={(e) => setInputText(e.target.value)}
+                />
+                <button className="search-icon" onClick={() => setSearch(inputText)}>
                     <FiSearch />
-                </div>
-                <input type="text" placeholder="Search..."/>
+                </button>
             </div>
             <div className="cryptos-list">
-                <CryptosList />
+                <CryptosList cryptoData={cryptoData} search={search}/>
             </div>
         </div>
     )

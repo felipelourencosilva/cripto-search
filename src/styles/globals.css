@@ -27,6 +27,11 @@ body {
   overflow-x: hidden;
 }
 
+a {
+  color: #DACDEB;
+  text-decoration: none;
+}
+
 ::-webkit-scrollbar {
   width: 15px;
 }

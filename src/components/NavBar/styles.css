@@ -13,6 +13,7 @@
     justify-content: center;
 
     width: 38%;
+    min-width: 430px;
     height: 64px;
 
     background: linear-gradient(90deg, rgba(29,29,29,0.26) 0%, rgba(31,31,31,0.19) 50%, rgba(34,34,34,0.25) 100%);

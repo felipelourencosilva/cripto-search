@@ -6,27 +6,7 @@ import axios from "axios";
 import "./styles.css";
 import Loading from "../Loading";
 
-export default function CryptosList() {
-    const [cryptoData, setCryptoData] = useState(null);
-    const [error, setError] = useState(null);
-
-    useEffect(() => {
-        const options = {method: 'GET', headers: {accept: 'application/json'}};
-        
-        const fetchData = async () => {
-            try {
-                const response = await axios.get(`https://api.coingecko.com/api/v3/coins/markets?vs_currency=brl&order=market_cap_desc&per_page=20&price_change_percentage=24h?x_cg_pro_api_key=${import.meta.env.VITE_APP_API_KEY}`);
-                setCryptoData(response.data);
-                console.log(response.data)
-            } catch (ex) {
-                console.error(ex);
-                setError(ex);
-            }
-        };
-
-        fetchData();
-    }, []);
-
+export default function CryptosList({ cryptoData, search }) {
     if (!cryptoData) {
         return <Loading />
     }
@@ -39,9 +19,10 @@ export default function CryptosList() {
                     key={crypto.id}
                     name={crypto.name}
                     price={crypto.current_price}
-                    image={crypto.image}
+                    image={search !== "" ? crypto.large : crypto.image}
                     symbol={crypto.symbol}
                     variation={crypto.price_change_percentage_24h}
+                    search={search}
                 />
             ))}
         </div>
