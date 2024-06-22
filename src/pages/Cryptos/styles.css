@@ -63,3 +63,47 @@
     align-items: center;
     justify-content: center;
 }
+
+.page-button-container {
+    display: flex;
+    justify-content: center;
+    height: 30px;
+    margin-top: 50px;
+}
+
+.page-button-container div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 30px;
+    width: 30px;
+
+    font-weight: 600;
+
+    border: 1px solid #dacdeb41;
+    border-radius: 5px;
+
+    background: linear-gradient(15deg, rgba(122, 44, 138, 0.3) 0%, rgba(28,28,28,0.5) 60%);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.page-button-container button{
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+
+    color: #655f6d;
+    font-size: 24px;
+    cursor: pointer;
+    transition: 0.2s;
+
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    margin-top: 2px;
+}
+
+.page-button-container button:hover{
+    color: rgb(212, 183, 245);
+}

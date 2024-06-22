@@ -7,9 +7,12 @@ import CryptosList from "../../components/CryptosList";
 
 import "./styles.css";
 import { FiSearch } from "react-icons/fi";
+import { FiChevronLeft } from "react-icons/fi";
+import { FiChevronRight } from "react-icons/fi";
 
 export default function CryptosPage() {
     const [search, setSearch] = useState("");
+    const [page, setPage] = useState(1);
     const [inputText, setInputText] = useState("");
     const [cryptoData, setCryptoData] = useState(null);
     const [error, setError] = useState(null);
@@ -17,7 +20,7 @@ export default function CryptosPage() {
     useEffect(() => {
         const handleSearch = async () => {
             try {
-                let url = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=brl&order=market_cap_desc&per_page=20&precision=2&price_change_percentage=24h?x_cg_pro_api_key=${import.meta.env.VITE_APP_API_KEY}`;
+                let url = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=brl&order=market_cap_desc&page=${page}&per_page=20&precision=2&price_change_percentage=24h?x_cg_pro_api_key=${import.meta.env.VITE_APP_API_KEY}`;
                 if (search !== "") {
                     url = `https://api.coingecko.com/api/v3/search?query=${search}`;
                     const response = await axios.get(url);
@@ -34,7 +37,13 @@ export default function CryptosPage() {
         };
         console.log(search);
         handleSearch();
-    }, [search]);
+    }, [search, page]);
+
+    const handlePageDecrement = () => {
+        if(page > 1) {
+            setPage(page-1);
+        }
+    }
 
     return (
         <div className="cryptos-container">
@@ -52,6 +61,15 @@ export default function CryptosPage() {
             <div className="cryptos-list">
                 <CryptosList cryptoData={cryptoData} search={search}/>
             </div>
+
+            {search ? ("") : (
+                <div className="page-button-container">
+                    <button onClick={handlePageDecrement}><FiChevronLeft /></button>
+                    <div>{page}</div>
+                    <button onClick={() => setPage(page+1)}><FiChevronRight /></button>
+                </div>
+                
+            )}
         </div>
     )
 }
