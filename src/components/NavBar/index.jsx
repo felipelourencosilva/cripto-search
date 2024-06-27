@@ -15,7 +15,7 @@ export default function NavBar() {
                     <Link id={location.pathname.includes("/cryptos") ? "selected-path" : ""} to="/cryptos">Cryptos</Link>
                 </li>
                 <li>
-                    <Link id={location.pathname === "/market" ? "selected-path" : ""} to="/market">Market</Link>
+                    <Link id={location.pathname === "/popular" ? "selected-path" : ""} to="/popular">Popular</Link>
                 </li>
                 <li>
                     <Link id={location.pathname === "/prices" ? "selected-path" : ""} to="/prices">Pricing</Link>
