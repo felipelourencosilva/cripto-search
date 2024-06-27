@@ -45,6 +45,12 @@ export default function CryptosPage() {
         }
     }
 
+    const handleSearchClick = () => {
+        setSearch(inputText);
+        setInputText("");
+    }
+
+
     return (
         <div className="cryptos-container">
             <div className="cryptos-search">
@@ -54,7 +60,7 @@ export default function CryptosPage() {
                     value={inputText}
                     onChange={(e) => setInputText(e.target.value)}
                 />
-                <button className="search-icon" onClick={() => setSearch(inputText)}>
+                <button className="search-icon" onClick={handleSearchClick}>
                     <FiSearch />
                 </button>
             </div>
@@ -68,7 +74,6 @@ export default function CryptosPage() {
                     <div>{page}</div>
                     <button onClick={() => setPage(page+1)}><FiChevronRight /></button>
                 </div>
-                
             )}
         </div>
     )

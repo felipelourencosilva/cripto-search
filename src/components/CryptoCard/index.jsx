@@ -18,7 +18,7 @@ export default function CryptoCard({ name, image, symbol, price, variation, id, 
                     </div>
                 </div>
                 
-                    {search === "" ? (
+                    {search === "" && variation ? (
                         <div className="crypto-card-prices">
                             <p className="crypto-price">R$ {price}</p>
                             <p className={`crypto-variation 
