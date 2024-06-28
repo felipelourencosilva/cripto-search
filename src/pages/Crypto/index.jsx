@@ -46,23 +46,48 @@ export default function CryptoPage() {
                         <p>({cryptoData.symbol.toUpperCase()})</p>
                     </div>
                     <div className="crypto-value-information">
-                        <h2>$ {cryptoData.market_data.current_price.brl}</h2>
+                        <h2>R$ {cryptoData.market_data.current_price.brl}</h2>
                         <p className={`${cryptoData.market_data.market_cap_change_percentage_24h_in_currency.brl >= 0 ? 'positive-variation' 
                         : 'negative-variation'}`}>
-                            {cryptoData.market_data.market_cap_change_percentage_24h_in_currency.brl}%
+                            {cryptoData.market_data.market_cap_change_percentage_24h_in_currency.brl.toFixed(2)}%
                         </p>
                     </div>
                 </div>
-                <div className="coin-container">
-                    <label for="coins">Moeda: </label>
-                    <select id="coins" name="coins">
-                        <option value="apple">BRL</option>
-                        <option value="banana">USD</option>
-                    </select>
+            </div>
+
+            <div className="crypto-info">
+                <div className="crypto-info-item">
+                    <h3>Volume</h3>
+                    <p>R$ {cryptoData.market_data.total_volume.brl}</p>
+                </div>
+                <div className="crypto-info-item">
+                    <h3>Total</h3>
+                    <p>{cryptoData.market_data.total_supply}</p>
+                </div>
+                <div className="crypto-info-item">
+                    <h3>Circulating</h3>
+                    <p>{cryptoData.market_data.circulating_supply}</p>
+                </div>
+                <div className="crypto-info-item">
+                    <h3>Market Cap</h3>
+                    <p>R$ {cryptoData.market_data.market_cap.brl}</p>
+                </div>
+                <div className="crypto-info-item">
+                    <h3>High 24h</h3>
+                    <p>R$ {cryptoData.market_data.high_24h.brl}</p>
+                </div>
+                <div className="crypto-info-item">
+                    <h3>Low 24h</h3>
+                    <p>R$ {cryptoData.market_data.low_24h.brl}</p>
                 </div>
             </div>
-            <div className="crypto-graph">
-            </div>
+
+            {cryptoData && cryptoData.description && (
+                <div className="crypto-about">
+                    <h2>About</h2>
+                    <div dangerouslySetInnerHTML={{ __html: cryptoData.description.en }} />
+                </div>
+            )}
 
             <div className="comeback-arrow">
                 <Link to=".." relative="path"><FiArrowLeft /></Link>

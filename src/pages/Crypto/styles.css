@@ -3,6 +3,7 @@
     width: 100%;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     position: relative;
 }
 
@@ -62,25 +63,6 @@
     margin-top: 5px;
 }
 
-.coin-container {
-    width: 25%;
-    color: #8d8d8d;
-    display: flex;
-    justify-content: end;
-    gap: 15px;
-}
-
-.coin-container select{
-    width: 80%;
-    height: 38px;
-    color: #DACDEB;
-    border: 1px solid rgba(255, 255, 255, 0.164);
-    border-radius: 5px;
-    background: rgba(0, 0, 0, 0.178);
-
-    padding: 0 5px 0 5px;
-}
-
 .crypto-graph {
     width: 70%;
     height: 400px;
@@ -93,4 +75,51 @@
     left: 0;
     top: 0;
     font-size: 24px;
+}
+
+.crypto-about {
+    width: 70%;
+    margin-top: 50px;
+}
+
+.crypto-about a{
+    color: rgb(116, 92, 255);
+}
+
+.crypto-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    height: 100px;
+    background: red;
+    border-radius: 10px;
+
+    background: linear-gradient(3deg, rgba(122, 44, 138, 0.3) 0%, rgba(28,28,28,0.5) 60%);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.crypto-info h3{
+    font-size: 18px;
+}
+
+.crypto-info p{
+    font-size: 14px;
+}
+
+.crypto-info-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 10px;
+    width: 100%;
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+    line-height: 0.6;
+    height: 80%;
+}
+
+.crypto-about div{
+    text-indent: 30px;
+    color: #a49eac;
 }
