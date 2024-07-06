@@ -1,22 +1,18 @@
 .crypto-card-container {
-    padding: 10px 20px;
+    padding: 5px 10px;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    width: 300px;
+    width: 100%;
     min-width: 240px;
-    min-height: 70px;
-    border-radius: 6px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    min-height: 50px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 
     font-weight: 600;
     color: #DACDEB;
     line-height: 0.3;
-    
-    background: linear-gradient(15deg, rgba(122, 44, 138, 0.3) 0%, rgba(28,28,28,0.5) 60%);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .crypto-card-information {
@@ -71,4 +67,10 @@
 
 .negative-variation{
     color: #b5072d;
+}
+
+.crypto-index {
+    color: rgba(179, 179, 179, 0.815);
+    font-weight: 400;
+    margin-right: 10px;
 }

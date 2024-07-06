@@ -1,14 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-import PrimaryButton from "../../components/PrimaryButton";
-import SecondaryButton from "../../components/SecondaryButton";
-import CryptosList from "../../components/CryptosList";
-
 import "./styles.css";
-import { FiSearch } from "react-icons/fi";
-import { FiChevronLeft } from "react-icons/fi";
-import { FiChevronRight } from "react-icons/fi";
 import PopularList from "../../components/PopularList";
 
 export default function PopularPage() {

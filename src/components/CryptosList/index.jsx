@@ -6,15 +6,17 @@ import axios from "axios";
 import "./styles.css";
 import Loading from "../Loading";
 
-export default function CryptosList({ cryptoData, search }) {
+export default function CryptosList({ cryptoData, search, page }) {
     if (!cryptoData) {
         return <Loading />
     }
 
     return (
         <div className="cryptos-list-container">
-            {cryptoData.map((crypto) => (
+            {cryptoData.map((crypto, index) => (
                 <CryptoCard
+                    index={index}
+                    page={page}
                     id={crypto.id}
                     key={crypto.id}
                     name={crypto.name}

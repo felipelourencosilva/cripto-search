@@ -20,7 +20,7 @@ export default function CryptosPage() {
     useEffect(() => {
         const handleSearch = async () => {
             try {
-                let url = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=brl&order=market_cap_desc&page=${page}&per_page=20&precision=2&price_change_percentage=24h?x_cg_pro_api_key=${import.meta.env.VITE_APP_API_KEY}`;
+                let url = `https://api.coingecko.com/api/v3/coins/markets?vs_currency=brl&order=market_cap_desc&page=${page}&per_page=20&price_change_percentage=24h?x_cg_pro_api_key=${import.meta.env.VITE_APP_API_KEY}`;
                 if (search !== "") {
                     url = `https://api.coingecko.com/api/v3/search?query=${search}`;
                     const response = await axios.get(url);
@@ -65,7 +65,7 @@ export default function CryptosPage() {
                 </button>
             </div>
             <div className="cryptos-list">
-                <CryptosList cryptoData={cryptoData} search={search}/>
+                <CryptosList cryptoData={cryptoData} search={search} page={page}/>
             </div>
 
             {search ? ("") : (
