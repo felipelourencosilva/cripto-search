@@ -10,16 +10,11 @@ export default function CryptoPage() {
     const { id } = useParams();
 
     const [cryptoData, setCryptoData] = useState(null);
-    const [search, setSearch] = useState("");
     const [error, setError] = useState(null);
 
     useEffect(() => {
         const fetchData = async () => {
             try {
-                if (search != "") {
-                    const response = await axios.get(`https://api.coingecko.com/api/v3/coins/${id}??x_cg_pro_api_key=${import.meta.env.VITE_APP_API_KEY}`);
-                    setCryptoData(response.data);
-                }
                 const response = await axios.get(`https://api.coingecko.com/api/v3/coins/${id}??x_cg_pro_api_key=${import.meta.env.VITE_APP_API_KEY}`);
                 setCryptoData(response.data);
                 console.log(response.data)
@@ -30,7 +25,7 @@ export default function CryptoPage() {
         };
 
         fetchData();
-    }, [id, search]);
+    }, [id]);
 
     if (!cryptoData) {
         return <Loading />

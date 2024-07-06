@@ -9,7 +9,7 @@ export default function HomePage() {
             <div className="home-title">
                 <h1>The <span>Crypto</span> world, </h1>
                 <h1>you find here</h1>
-                <h2>At lacus nulla sagittis scelerisque nisl. Pellentesque dius cursus vestibulum, facilisi ac, sed faucibus.</h2>
+                <h2>Discover, Learn, Thrive: Your Premier Destination for Cryptocurrency Information</h2>
             </div>
             <div className="buttons">
                <PrimaryButton path={"/cryptos"}>See cryptos</PrimaryButton>
