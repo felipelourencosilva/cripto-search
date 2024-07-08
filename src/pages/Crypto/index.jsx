@@ -17,9 +17,7 @@ export default function CryptoPage() {
             try {
                 const response = await axios.get(`https://api.coingecko.com/api/v3/coins/${id}??x_cg_pro_api_key=${import.meta.env.VITE_APP_API_KEY}`);
                 setCryptoData(response.data);
-                console.log(response.data)
             } catch (ex) {
-                console.error(ex);
                 setError(ex);
             }
         };

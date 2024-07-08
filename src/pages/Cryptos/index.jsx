@@ -1,8 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-import PrimaryButton from "../../components/PrimaryButton";
-import SecondaryButton from "../../components/SecondaryButton";
 import CryptosList from "../../components/CryptosList";
 
 import "./styles.css";
@@ -28,14 +26,11 @@ export default function CryptosPage() {
                 } else {
                     const response = await axios.get(url);
                     setCryptoData(response.data);
-                    console.log(response.data)
                 }
             } catch (ex) {
-                console.error(ex);
                 setError(ex);
             }
         };
-        console.log(search);
         handleSearch();
     }, [search, page]);
 

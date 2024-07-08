@@ -3,10 +3,8 @@ import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import './styles/globals.css'
 import HomePage from './pages/Home/index.jsx'
-import NavBar from './components/NavBar/index.jsx'
 import Layout from './components/Layout/index.jsx'
 import CryptosPage from './pages/Cryptos/index.jsx'
-import CryptoCard from './components/CryptoCard/index.jsx'
 import CryptoPage from './pages/Crypto/index.jsx'
 import PopularPage from './pages/Popular/index.jsx'
 
